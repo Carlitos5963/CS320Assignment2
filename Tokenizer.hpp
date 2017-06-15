@@ -4,6 +4,7 @@
 #include <vector>
 #include <string>
 #include <sstream>
+#include <ctype.h>
 
 
 // Namespace to declare scope for the class and functions
