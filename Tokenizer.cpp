@@ -15,14 +15,14 @@ using namespace std;
 // Class for a tokenizer object
 class Tokenizer{
 	public:
-	vector<string> * GetToken();
+	vector<string> * GetTokens();
 	//Tokenizer();
 	
 };
 
 // Function that takes in a string from STDIN and and splits it up into tokens.
 // Returns a pointer to a vector of type string (vector<string>*)
-vector<string> * Tokenizer::GetToken()
+vector<string> * Tokenizer::GetTokens()
 {
 
 	vector<string>* myVector = new vector<string>;
