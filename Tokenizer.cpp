@@ -17,9 +17,6 @@ std::vector<std::string>* GetToken();
 // Class for a tokenizer object
 class Tokenizer{
 	public:
-// Class for a tokenizer object
-class Tokenizer{
-	public:
 	// Function that takes in a string from STDIN and and splits it up into tokens.
 	// Returns a pointer to a vector of type string (vector<string>*)
 	vector<string> * GetToken()
@@ -73,8 +70,11 @@ vector<string> * GetToken()
 	return myVector;
 
 }
+
 /*
 int main(){
+	Tokenizer tok;
+	tok.GetToken();
 	vector<string>* v = GetToken();
 	cout << "Vector size: " << v->size() << endl;
 	for (vector<string>::const_iterator i = v->begin(); i != v->end(); i++)
