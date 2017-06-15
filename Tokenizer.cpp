@@ -2,6 +2,9 @@
 #include <iostream>
 #include <istream>
 #include <iterator>
+#include <vector>
+#include <string>
+#include <sstream>
 
 
 
@@ -43,7 +46,6 @@ vector<string> * GetToken()
 	return myVector;
 
 }
-
 /*
 int main(){
 	vector<string>* v = GetToken();
