@@ -33,6 +33,11 @@ vector<string> * Tokenizer::GetTokens()
 	while(iss); // Will repeat if there is more string
 
 	myVector->pop_back(); // Remove the last element of vector (empty element)
+	
+	if(myVector->size() > 2){
+		cout << "ERROR! Incorrect number of tokens found." << endl;
+		GetTokens();
+		}
 
 	return myVector;
 
