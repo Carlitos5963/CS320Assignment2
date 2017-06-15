@@ -32,7 +32,8 @@ vector<string> * Tokenizer::GetTokens()
 		string sub; // Token to hold tokens temporarily
 		iss >> sub; // Will take part of string and place it in the token variable
 		myVector->push_back(sub); // Places token into the vector
-		if(isdigit(sub)){
+		int tempNum = stoi(sub);
+		if(isdigit(tempNum)){
 			intCount++;
 			}
 		else{
