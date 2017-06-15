@@ -9,7 +9,7 @@ public:
 	void Stack <T>::Push(T d); 
 	T Stack <T>::Pop();
 	void Stack <T>::Print();
-}
+};
 
 // Method used to push data onto the stack
 template <class T> 
