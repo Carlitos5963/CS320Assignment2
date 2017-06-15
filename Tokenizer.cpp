@@ -17,6 +17,9 @@ using namespace std;
 vector<string> * Tokenizer::GetTokens()
 {
 
+	int intCount = 0;
+	int strCount = 0;
+
 	vector<string>* myVector = new vector<string>;
 	char arr[66]; // Array to hold user input
 	
@@ -29,6 +32,12 @@ vector<string> * Tokenizer::GetTokens()
 		string sub; // Token to hold tokens temporarily
 		iss >> sub; // Will take part of string and place it in the token variable
 		myVector->push_back(sub); // Places token into the vector
+		if(isdigit(sub)){
+			intCount++;
+			}
+		else{
+			strCount++;
+			}
 	}
 	while(iss); // Will repeat if there is more string
 
@@ -36,6 +45,10 @@ vector<string> * Tokenizer::GetTokens()
 	
 	if(myVector->size() > 2){
 		cout << "ERROR! Incorrect number of tokens found." << endl;
+		GetTokens();
+		}
+	if(intCount > 1 || strCount < 1){
+		cout << "ERROR! Expected STR INT." << endl;
 		GetTokens();
 		}
 
