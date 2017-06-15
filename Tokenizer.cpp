@@ -38,7 +38,3 @@ vector<string> * Tokenizer::GetTokens()
 
 }
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 1cf3f5bb56030b7c295255f6eb22975295eb5cf3
