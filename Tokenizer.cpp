@@ -5,7 +5,7 @@
 #include <vector>
 #include <string>
 #include <sstream>
-#include <ctype.h>
+#include <cstdlib>
 
 
 // Namespace to declare scope for the class and functions
@@ -34,7 +34,7 @@ vector<string> * Tokenizer::GetTokens()
 		myVector->push_back(sub); // Places token into the vector
 
 
-		if(isdigit(myVector->at(myVector->size()-1) != 0){
+		if(strtol(sub) != 0){
 			intCount++;
 			}
 		else{
