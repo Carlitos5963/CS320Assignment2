@@ -1,29 +1,20 @@
-//#include "Tokenizer.hpp"
-#include <string>
-#include <vector>
-#include <sstream>
+#include "Tokenizer.hpp"
 #include <iostream>
 #include <istream>
 #include <iterator>
+#include <vector>
+#include <string>
+#include <sstream>
 
 
 
 // Namespace to declare scope for the class and functions
 using namespace std;
 
-// Protoype for the method GetToken()
-std::vector<std::string>* GetToken();
-
-// Class for a tokenizer object
-class Tokenizer{
-	public:
-	vector<string> * GetToken();
-
-};
 
 // Function that takes in a string from STDIN and and splits it up into tokens.
 // Returns a pointer to a vector of type string (vector<string>*)
-vector<string> * GetToken()
+vector<string> * Tokenizer::GetTokens()
 {
 
 	vector<string>* myVector = new vector<string>;
@@ -47,12 +38,4 @@ vector<string> * GetToken()
 
 }
 
-/*
-int main(){
-	vector<string>* v = GetToken();
-	cout << "Vector size: " << v->size() << endl;
-	for (vector<string>::const_iterator i = v->begin(); i != v->end(); i++)
-cout << *i << ' ';
-}
-*/
 
