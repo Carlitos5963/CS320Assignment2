@@ -33,7 +33,7 @@ vector<string> * Tokenizer::GetTokens()
 		iss >> sub; // Will take part of string and place it in the token variable
 		myVector->push_back(sub); // Places token into the vector
 
-		int testNum = atoi(sub);
+		int testNum = stoi(sub);
 
 		if(testNum != 0){
 			intCount++;
