@@ -1,4 +1,4 @@
-//#include "Tokenizer.hpp"
+#include "Tokenizer.hpp"
 #include <iostream>
 #include <istream>
 #include <iterator>
@@ -11,14 +11,14 @@
 // Namespace to declare scope for the class and functions
 using namespace std;
 
-
+/*
 // Class for a tokenizer object
 class Tokenizer{
 	public:
-	vector<string> * GetTokens();
+	vector<string> * GetToken();
 	//Tokenizer();
 	
-};
+};*/
 
 // Function that takes in a string from STDIN and and splits it up into tokens.
 // Returns a pointer to a vector of type string (vector<string>*)
@@ -49,7 +49,7 @@ vector<string> * Tokenizer::GetTokens()
 /*
 int main(){
 	Tokenizer tok;
-	tok.GetToken();
+	tok.GetTokens();
 	//vector<string>* v = GetToken();
 	//cout << "Vector size: " << v->size() << endl;
 	//for (vector<string>::const_iterator i = v->begin(); i != v->end(); i++)
