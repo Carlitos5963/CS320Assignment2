@@ -53,6 +53,13 @@ vector<string> * Tokenizer::GetTokens()
 		cout << "ERROR! Expected STR INT." << endl;
 		GetTokens();
 		}
+	if(intCount = 1){
+		cout << "ERROR! Expected STR." << endl;
+		GetTokens();
+		}
+	if(strCount = 1){
+		GetTokens();
+		}
 
 	return myVector;
 
