@@ -6,6 +6,7 @@
 #include <string>
 #include <sstream>
 #include <ctype.h>
+#include <boost/algorithm/string/predicate.hpp>
 
 
 // Namespace to declare scope for the class and functions
@@ -41,7 +42,7 @@ vector<string> * Tokenizer::GetTokens()
 			}
 		else{
 			strCount++;
-			if((strcasecmp(sub, "quit\n") || (strcasecmp(sub, "quit")){
+			if(boost::iequals(sub, "quit\n")){
 				quitTrue = 1;
 				}
 			}
@@ -54,10 +55,6 @@ vector<string> * Tokenizer::GetTokens()
 	if(myVector->size() > 2){
 		cout << "ERROR! Incorrect number of tokens found." << endl;
 		GetTokens();
-		}
-	//If the first token is equal to quit (case insensitive), the program finishes
-	if((strcasecmp(ptr, "quit\n") == 0) && count <= 1){
-		return 0;
 		}
 	else if(quitTrue == 1 || intCount == 1){
 		return myVector;
