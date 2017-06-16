@@ -34,7 +34,7 @@ vector<string> * Tokenizer::GetTokens()
 		myVector->push_back(sub); // Places token into the vector
 
 
-		if(isdigit(sub[0] != 0){
+		if(isdigit(sub[0]) != 0){
 			intCount++;
 			}
 		else{
