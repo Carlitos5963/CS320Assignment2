@@ -53,7 +53,7 @@ vector<string> * Tokenizer::GetTokens()
 		cout << "ERROR! Expected STR INT." << endl;
 		GetTokens();
 		}
-	if(!(isdigit(myVector->front()[0]) || intCount = 1){
+	if(!(isdigit(myVector->front()[0]) || intCount == 1){
 		GetTokens();
 		}
 	if(intCount = 1){
