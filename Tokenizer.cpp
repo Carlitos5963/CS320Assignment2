@@ -24,6 +24,7 @@ vector<string> * Tokenizer::GetTokens()
 	char arr[66]; // Array to hold user input
 	
 	cin.getline(arr, 65); // Used to collect input from user
+	cout << "> ";
 	string str(arr); // Converts contents of array into a string
 	istringstream iss(str); // String stream used to break up the string
 	
