@@ -19,6 +19,7 @@ vector<string> * Tokenizer::GetTokens()
 
 	int intCount = 0;
 	int strCount = 0;
+	int quitTrue = 0;
 
 	vector<string>* myVector = new vector<string>;
 	char arr[66]; // Array to hold user input
@@ -40,6 +41,9 @@ vector<string> * Tokenizer::GetTokens()
 			}
 		else{
 			strCount++;
+			if((strcasecmp(sub, "quit\n") || (strcasecmp(sub, "quit")){
+				quitTrue = 1;
+				}
 			}
 	}
 	while(iss); // Will repeat if there is more string
@@ -50,6 +54,13 @@ vector<string> * Tokenizer::GetTokens()
 	if(myVector->size() > 2){
 		cout << "ERROR! Incorrect number of tokens found." << endl;
 		GetTokens();
+		}
+	//If the first token is equal to quit (case insensitive), the program finishes
+	if((strcasecmp(ptr, "quit\n") == 0) && count <= 1){
+		return 0;
+		}
+	else if(quitTrue == 1 || intCount == 1){
+		return myVector;
 		}
 	else if(intCount > 1 || strCount > 2){
 		cout << "ERROR! Expected STR INT." << endl;
