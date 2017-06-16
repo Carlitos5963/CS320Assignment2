@@ -46,6 +46,7 @@ vector<string> * Tokenizer::GetTokens()
 
 	myVector->pop_back(); // Remove the last element of vector (empty element)
 	
+	
 	if(myVector->size() > 2){
 		cout << "ERROR! Incorrect number of tokens found." << endl;
 		GetTokens();
@@ -58,7 +59,7 @@ vector<string> * Tokenizer::GetTokens()
 		cout << "ERROR! Expected STR." << endl;
 		GetTokens();
 		}
-	else if(strCount == 2 || intCount == 0){
+	else if(strCount == 2 && intCount == 0){
 		GetTokens();
 		}
 	else{
