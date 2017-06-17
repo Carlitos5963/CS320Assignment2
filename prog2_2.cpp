@@ -23,6 +23,7 @@ int main(){
 		if(v->size() == 1){
 			cout << "STR" << endl;
 			}
+		}
 
 	return 1;
 }
