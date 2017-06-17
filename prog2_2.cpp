@@ -17,7 +17,10 @@ int main(){
 	while(1){
 
 		v = tok.GetTokens();
-		if(v->size() <= 0){
+		char *ptr = &v[0];
+
+		//Checks to see if the token says 'quit'
+		if(strcasecmp(ptr, "quit\0") == 0 || strcasecmp(ptr, "quit") == 0){
 			return 0;
 			}
 		if(v->size() >= 2){
