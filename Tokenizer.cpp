@@ -72,7 +72,8 @@ vector<string> * Tokenizer::GetTokens()
 		return myVector;
 		}
 	else if(quitTrue == 1 && strCount == 2){
-		exit(0);//myVector;
+GetTokens();
+		return myVector;
 		}
 	else if(intCount == 1 && strCount <= 1){
 		cout << "ERROR! Expected STR." << endl;
