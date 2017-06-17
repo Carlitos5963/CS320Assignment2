@@ -48,7 +48,7 @@ vector<string> * Tokenizer::GetTokens()
 				}
 			if(intCount == 0){
 				strFirst = 1;
-				{
+				}
 			}
 	}
 	while(iss); // Will repeat if there is more string
