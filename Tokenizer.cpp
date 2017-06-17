@@ -65,7 +65,7 @@ vector<string> * Tokenizer::GetTokens()
 	if(myVector->size() > 2 || myVector->size() <= 0){
 		cout << "ERROR! Incorrect number of tokens found." << endl;
 		GetTokens();
-		return myVector;
+		return 0;
 		}
 	//If there is 1 int and 1 string, but the int came first
 	//Also if there are more than 1 string
@@ -73,7 +73,7 @@ vector<string> * Tokenizer::GetTokens()
 	else if((intCount == 1 && strCount == 2 && strFirst != 1) || strCount > 2 || intCount > 1){
 		cout << "ERROR! Expected STR INT." << endl;
 		GetTokens();
-		return myVector;
+		return 0;
 		}
 	//If there is 1 string and 1 int and the string came first
 	else if(intCount == 1 && strCount == 2 && strFirst == 1){
@@ -88,7 +88,7 @@ vector<string> * Tokenizer::GetTokens()
 	else if(intCount == 1 && strCount <= 1){
 		cout << "ERROR! Expected STR." << endl;
 		GetTokens();
-		return myVector;
+		return 0;
 		}
 	//If there is one string and it is not quit
 	else if(strCount == 2 && quitTrue != 1){
