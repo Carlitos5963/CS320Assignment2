@@ -60,7 +60,7 @@ vector<string> * Tokenizer::GetTokens()
 		cout << "ERROR! Incorrect number of tokens found." << endl;
 		GetTokens();
 		}
-	else if((strFirst = 1 || intCount >= 1) || (quitTrue == 1 && intCount == 1)){
+	else if(quitTrue == 1 && intCount == 1){
 		cout << "ERROR! Expected STR INT." << endl;
 		GetTokens();
 		}
