@@ -35,8 +35,7 @@ vector<string> * Tokenizer::GetTokens()
 		string sub; // Token to hold tokens temporarily
 		iss >> sub; // Will take part of string and place it in the token variable
 		myVector->push_back(sub); // Places token into the vector
-		//const char *ptr = ;
-		cout << sub << endl;
+		const char *ptr = &sub[0];
 
 		if(isdigit(sub[0]) != 0){
 			intCount++;
@@ -44,9 +43,9 @@ vector<string> * Tokenizer::GetTokens()
 		else{
 			strCount++;
 //Work on this---------------->
-			//if((strcasecmp(ptr, "quit\n")) != 0){
-			//	quitTrue = 1;
-			//	}
+			if((strcasecmp(ptr, "quit\n")) != 0){
+				quitTrue = 1;
+				}
 			}
 	}
 	while(iss); // Will repeat if there is more string
