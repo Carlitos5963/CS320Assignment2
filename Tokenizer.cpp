@@ -7,6 +7,7 @@
 #include <sstream>
 #include <ctype.h>
 #include <string.h>
+#include <cstdlib>
 
 
 // Namespace to declare scope for the class and functions
@@ -71,7 +72,7 @@ vector<string> * Tokenizer::GetTokens()
 		return myVector;
 		}
 	else if(quitTrue == 1 && strCount == 2){
-		return 0;//myVector;
+		exit(0);//myVector;
 		}
 	else if(intCount == 1 && strCount <= 1){
 		cout << "ERROR! Expected STR." << endl;
