@@ -93,7 +93,7 @@ vector<string> * Tokenizer::GetTokens()
 	//If there is one string and it is not quit
 	else if(strCount == 2 && quitTrue != 1){
 		//GetTokens();
-		return myVector;
+		return 0;
 		}
 	else{
 		return myVector;
