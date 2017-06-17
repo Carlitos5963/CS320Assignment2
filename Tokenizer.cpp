@@ -78,6 +78,7 @@ vector<string> * Tokenizer::GetTokens()
 		}
 	//If there is exactly 1 string and it says quit
 	else if(quitTrue == 1 && strCount <= 2){
+cout << "This should quit" << endl;
 		return 0;
 		}
 	//If there is 1 int and 0 or less strings
