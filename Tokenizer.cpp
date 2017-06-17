@@ -79,12 +79,13 @@ vector<string> * Tokenizer::GetTokens()
 		}
 	//If there is exactly 1 string and it says quit
 	else if(quitTrue == 1 && strCount <= 2){
+		getTokens(); //testing just cause
 		return myVector;
 		}
 	//If there is 1 int and 0 or less strings
 	else if(intCount == 1 && strCount <= 1){
 		cout << "ERROR! Expected STR." << endl;
-		//GetTokens(); this one is a temp
+		GetTokens();
 		return myVector;
 		}
 	//If there is one string and it is not quit
