@@ -21,6 +21,7 @@ vector<string> * Tokenizer::GetTokens()
 	int intCount = 0;
 	int strCount = 0;
 	int quitTrue = 0;
+	int strFirst = 0;
 
 	vector<string>* myVector = new vector<string>;
 	char arr[66]; // Array to hold user input
@@ -42,10 +43,12 @@ vector<string> * Tokenizer::GetTokens()
 			}
 		else{
 			strCount++;
-//Work on this---------------->
 			if(strcasecmp(ptr, "quit\0") == 0 || strcasecmp(ptr, "quit") == 0){
 				quitTrue = 1;
 				}
+			if(intCount == 0){
+				strFirst = 1;
+				{
 			}
 	}
 	while(iss); // Will repeat if there is more string
@@ -53,16 +56,19 @@ vector<string> * Tokenizer::GetTokens()
 	myVector->pop_back(); // Remove the last element of vector (empty element)
 	
 	
-	if(myVector->size() > 2){
+	if(myVector->size() > 2 || myVector->size() <= 0){
 		cout << "ERROR! Incorrect number of tokens found." << endl;
 		GetTokens();
 		}
-
+	else if((strFirst = 1 || intCount >= 1) || (quitTrue == 1 && intCount == 1)){
+		cout << "ERROR! Expected STR INT." << endl;
+		GetTokens();
+		}
 	else if(intCount > 1 || strCount > 2){
 		cout << "ERROR! Expected STR INT." << endl;
 		GetTokens();
 		}
-	else if(quitTrue == 1 || intCount == 1){
+	else if(quitTrue == 1 && strCount == 2){
 		return myVector;
 		}
 	else if(intCount == 1 && strCount == 1){
