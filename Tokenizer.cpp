@@ -64,7 +64,7 @@ vector<string> * Tokenizer::GetTokens()
 	//If there are no tokens or more than 2 tokens
 	if(myVector->size() > 2 || myVector->size() <= 0){
 		cout << "ERROR! Incorrect number of tokens found." << endl;
-		myVector->GetTokens();
+		myVector = GetTokens();
 		return 0;
 		}
 	//If there is 1 int and 1 string, but the int came first
