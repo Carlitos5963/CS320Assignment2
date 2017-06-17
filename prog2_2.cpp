@@ -17,19 +17,12 @@ int main(){
 	while(1){
 
 		v = tok.GetTokens();
-		if(isdigit(v->back()[0]) != 1){
-			cout << "STR ";
+		if(v->size() >= 2){
+			cout << "STR INT" >> endl;
 			}
-		else{
-			cout << "INT ";
+		if(v->size() == ){
+			cout << "STR" >> endl;
 			}
-		if(isdigit(v->back()[1]) != 1){
-			cout << "STR " << endl;
-			}
-		else{
-			cout << "INT " << endl;
-			}
-		}
 
 	return 1;
 }
