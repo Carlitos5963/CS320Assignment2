@@ -20,10 +20,10 @@ using namespace std;
 vector<string> * Tokenizer::GetTokens()
 {
 
-	int intCount = 0;
-	int strCount = 0;
-	int quitTrue = 0;
-	int strFirst = 0;
+	int intCount = 0; //To count ints
+	int strCount = 0; //To count strings
+	int quitTrue = 0; //To determine if quit has been entered
+	int strFirst = 0; //To determine if the first token is a string
 
 	vector<string>* myVector = new vector<string>;
 	char arr[66]; // Array to hold user input
@@ -67,6 +67,7 @@ vector<string> * Tokenizer::GetTokens()
 		myVector = GetTokens();
 		return myVector;
 		}
+
 	//If there is 1 int and 1 string, but the int came first
 	//Also if there are more than 1 string
 	//Also if there are more than 1 ints
@@ -75,26 +76,31 @@ vector<string> * Tokenizer::GetTokens()
 		myVector = GetTokens();
 		return myVector;
 		}
+
 	//If there is 1 string and 1 int and the string came first
 	else if(intCount == 1 && strCount == 2 && strFirst == 1){
 		//myVector = GetTokens();
 		return myVector;
 		}
+
 	//If there is exactly 1 string and it says quit
 	else if(quitTrue == 1 && strCount <= 2){
 		return myVector;
 		}
+
 	//If there is 1 int and 0 or less strings
 	else if(intCount == 1 && strCount <= 1){
 		cout << "ERROR! Expected STR." << endl;
 		myVector = GetTokens();
 		return myVector;
 		}
+
 	//If there is one string and it is not quit
 	else if(strCount == 2 && quitTrue != 1){
 		//myVector = GetTokens();
 		return myVector;
 		}
+
 	else{
 		return myVector;
 		}
