@@ -88,11 +88,12 @@ vector<string> * Tokenizer::GetTokens()
 	else if(intCount == 1 && strCount <= 1){
 		cout << "ERROR! Expected STR." << endl;
 		GetTokens();
-		return 0; //Dont know about this
+		return myVector;
 		}
 	//If there is one string and it is not quit
 	else if(strCount == 2 && quitTrue != 1){
 		//GetTokens();
+cout << "biefnciufncofei" <<endl;
 		return 0;
 		}
 	else{
