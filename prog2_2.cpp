@@ -1,6 +1,7 @@
 #include "Tokenizer.hpp"
 #include <stdio.h>
 #include <string>
+#include <string.h>
 #include <ctype.h>
 #include <stdlib.h>
 #include <vector>
