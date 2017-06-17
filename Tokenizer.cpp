@@ -72,7 +72,6 @@ vector<string> * Tokenizer::GetTokens()
 		return myVector;
 		}
 	else if(quitTrue == 1 && strCount == 2){
-GetTokens();
 		return myVector;
 		}
 	else if(intCount == 1 && strCount <= 1){
