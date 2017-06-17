@@ -96,7 +96,7 @@ vector<string> * Tokenizer::GetTokens()
 		return 0;
 		}
 	else{
-		return myVector;
+		return 0;
 		}
 }
 
