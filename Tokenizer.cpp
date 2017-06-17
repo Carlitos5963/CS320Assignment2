@@ -45,6 +45,7 @@ vector<string> * Tokenizer::GetTokens()
 //Work on this---------------->
 			if((strcasecmp(ptr, "quit\n")) != 0){
 				quitTrue = 1;
+cout << "THIS WILL QUIT! << endl;
 				}
 			}
 	}
