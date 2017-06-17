@@ -18,10 +18,10 @@ int main(){
 
 		v = tok.GetTokens();
 		if(v->size() >= 2){
-			cout << "STR INT" >> endl;
+			cout << "STR INT" << endl;
 			}
-		if(v->size() == ){
-			cout << "STR" >> endl;
+		if(v->size() == 1){
+			cout << "STR" << endl;
 			}
 
 	return 1;
