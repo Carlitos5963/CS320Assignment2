@@ -6,7 +6,7 @@
 #include <string>
 #include <sstream>
 #include <ctype.h>
-#include <boost/algorithm/string/predicate.hpp>
+#include <string.h>
 
 
 // Namespace to declare scope for the class and functions
@@ -35,16 +35,18 @@ vector<string> * Tokenizer::GetTokens()
 		string sub; // Token to hold tokens temporarily
 		iss >> sub; // Will take part of string and place it in the token variable
 		myVector->push_back(sub); // Places token into the vector
-
+		//const char *ptr = ;
+		cout << sub << endl;
 
 		if(isdigit(sub[0]) != 0){
 			intCount++;
 			}
 		else{
 			strCount++;
-			if(boost::iequals(sub, "quit\n")){
-				quitTrue = 1;
-				}
+//Work on this---------------->
+			//if((strcasecmp(ptr, "quit\n")) != 0){
+			//	quitTrue = 1;
+			//	}
 			}
 	}
 	while(iss); // Will repeat if there is more string

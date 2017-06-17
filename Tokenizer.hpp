@@ -5,6 +5,7 @@
 #include <string>
 #include <sstream>
 #include <ctype.h>
+#include <string.h>
 
 
 // Namespace to declare scope for the class and functions
