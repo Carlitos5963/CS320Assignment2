@@ -40,14 +40,17 @@ vector<string> * Tokenizer::GetTokens()
 		myVector->push_back(sub); // Places token into the vector
 		char *ptr = &sub[0];
 
+		//checks to see if token is an int
 		if(isdigit(sub[0]) != 0){
 			intCount++;
 			}
 		else{
 			strCount++;
+			//Checks to see if the token says 'quit'
 			if(strcasecmp(ptr, "quit\0") == 0 || strcasecmp(ptr, "quit") == 0){
 				quitTrue = 1;
 				}
+			//Checks to see if the first token is a string
 			if(intCount == 0){
 				strFirst = 1;
 				}
@@ -75,7 +78,7 @@ vector<string> * Tokenizer::GetTokens()
 	//If there is 1 string and 1 int and the string came first
 	else if(intCount == 1 && strCount == 2 && strFirst == 1){
 		//GetTokens();
-		return myVector;
+		return 0;
 		}
 	//If there is exactly 1 string and it says quit
 	else if(quitTrue == 1 && strCount <= 2){
