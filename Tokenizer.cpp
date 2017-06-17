@@ -77,7 +77,7 @@ vector<string> * Tokenizer::GetTokens()
 		}
 	//If there is 1 string and 1 int and the string came first
 	else if(intCount == 1 && strCount == 2 && strFirst == 1){
-		myVector = GetTokens();
+		//myVector = GetTokens();
 		return myVector;
 		}
 	//If there is exactly 1 string and it says quit
