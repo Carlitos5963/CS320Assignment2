@@ -59,12 +59,12 @@ vector<string> * Tokenizer::GetTokens()
 	
 	if(myVector->size() > 2 || myVector->size() <= 0){
 		cout << "ERROR! Incorrect number of tokens found." << endl;
-		GetTokens();
+		//GetTokens();
 		return myVector;
 		}
 	else if((intCount == 1 && strCount == 2 && strFirst != 1) || strCount > 2){
 		cout << "ERROR! Expected STR INT." << endl;
-		GetTokens();
+		//GetTokens();
 		return myVector;
 		}
 	else if(intCount == 1 && strCount == 2 && strFirst == 1){
@@ -76,11 +76,11 @@ vector<string> * Tokenizer::GetTokens()
 		}
 	else if(intCount == 1 && strCount <= 1){
 		cout << "ERROR! Expected STR." << endl;
-		GetTokens();
+		//GetTokens();
 		return myVector;
 		}
 	else if(strCount == 2 && quitTrue != 1){
-		GetTokens();
+		//GetTokens();
 		return myVector;
 		}
 	else{
