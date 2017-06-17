@@ -17,6 +17,9 @@ int main(){
 	while(1){
 
 		v = tok.GetTokens();
+		if(v->size() <= 0){
+			return 0;
+			}
 		if(v->size() >= 2){
 			cout << "STR INT" << endl;
 			}
