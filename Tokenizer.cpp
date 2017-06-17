@@ -63,11 +63,15 @@ vector<string> * Tokenizer::GetTokens()
 		}
 	else if(intCount == 1 && strCount == 2 && strFirst != 1){
 		cout << "ERROR! Expected STR INT." << endl;
+	cout << "before GetTokens 1" << endl;
 		GetTokens();
+	cout << "after GetTokens 1" << endl;
 		return myVector;
 		}
 	else if(intCount == 1 && strCount == 2 && strFirst == 1){
+	cout << "before GetTokens 2" << endl;
 		GetTokens();
+	cout << "before GetTokens 2" << endl;
 		return myVector;
 		}
 	else if(quitTrue == 1 && strCount == 2){
