@@ -79,7 +79,7 @@ vector<string> * Tokenizer::GetTokens()
 		}
 	//If there is exactly 1 string and it says quit
 	else if(quitTrue == 1 && strCount <= 2){
-		getTokens(); //testing just cause
+		GetTokens(); //testing just cause
 		return myVector;
 		}
 	//If there is 1 int and 0 or less strings
