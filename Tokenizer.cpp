@@ -65,7 +65,8 @@ vector<string> * Tokenizer::GetTokens()
 		}
 	//If there is 1 int and 1 string, but the int came first
 	//Also if there are more than 1 string
-	else if((intCount == 1 && strCount == 2 && strFirst != 1) || strCount > 2){
+	//Also if there are more than 1 ints
+	else if((intCount == 1 && strCount == 2 && strFirst != 1) || strCount > 2 || intCount > 1){
 		cout << "ERROR! Expected STR INT." << endl;
 		GetTokens();
 		return myVector;
