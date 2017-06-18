@@ -16,7 +16,7 @@ int main(){
 	vector<string> *v;
 	cout << "Assignment #2-3, Jose Carlos Gomez, JoseCarlosGomez69@gmail.com" << endl;
 	Tokenizer tok; //Instance of the Token object
-	Stack<string> stack;
+	Stack<string> stack; //The stack to hold tokens
 	int count = 0;
 
 	// Set to run until told to quit
@@ -24,23 +24,23 @@ int main(){
 
 		count++;
 		v = tok.GetTokens(); //Set pointer equal to a vector
-		char *ptr = &v->front()[0];
+		char *ptr = &v->front()[0]; //Pointer to point at first word
 
 
 
 		//If first token says 'pop', then pop top stack token off of stack
 		if((strcmp(ptr, "pop\0") == 0 || strcmp(ptr, "pop") == 0) && v->size() == 1){
-			stack.Pop();
-			//return 0;
+			stack.Pop(); //Pop off top stack element
 			}
+
 		//If first token says 'push', then push second token into stack
 		if((strcmp(ptr, "push\0") == 0 || strcmp(ptr, "push") == 0)){
-			stack.Push(v->back());
+			stack.Push(v->back()); //Push 2nd token on top of stack
 			//return 0;
 			}
 		//Checks to see if the token says 'quit'
 		if((strcasecmp(ptr, "quit\0") == 0 || strcasecmp(ptr, "quit") == 0) || count > 6)		{
-			stack.Print();
+			stack.Print(); //Print stack before program exits
 			return 0;
 			}
 
