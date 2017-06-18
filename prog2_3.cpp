@@ -35,7 +35,7 @@ int main(){
 			}
 		//If first token says 'push', then push second token into stack
 		if((strcmp(ptr, "push\0") == 0 || strcmp(ptr, "push") == 0)){
-			stack.Push(v->back()[0]);
+			stack.Push(v->back());
 			return 0;
 			}
 		//Checks to see if the token says 'quit'
