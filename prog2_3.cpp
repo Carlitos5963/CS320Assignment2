@@ -16,7 +16,7 @@ int main(){
 	vector<string> *v;
 	cout << "Assignment #2-3, Jose Carlos Gomez, JoseCarlosGomez69@gmail.com" << endl;
 	Tokenizer tok; //Instance of the Token object
-	Stack stack;
+	Stack<string> stack;
 	
 
 	// Set to run until told to quit
