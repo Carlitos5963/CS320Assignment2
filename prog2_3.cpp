@@ -31,12 +31,12 @@ int main(){
 		//If first token says 'pop', then pop top stack token off of stack
 		if((strcmp(ptr, "pop\0") == 0 || strcmp(ptr, "pop") == 0) && v->size() > 1){
 			stack.Pop();
-			return 0;
+			//return 0;
 			}
 		//If first token says 'push', then push second token into stack
 		if((strcmp(ptr, "push\0") == 0 || strcmp(ptr, "push") == 0)){
 			stack.Push(v->at(1));
-			return 0;
+			//return 0;
 			}
 		//Checks to see if the token says 'quit'
 		if((strcasecmp(ptr, "quit\0") == 0 || strcasecmp(ptr, "quit") == 0) || count > 6)		{
