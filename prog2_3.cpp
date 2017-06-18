@@ -32,16 +32,15 @@ int main(){
 			}
 
 		//If first token says 'pop', then pop top stack token off of stack
-		if((strcasecmp(ptr, "pop\0") == 0 || strcasecmp(ptr, "pop") == 0) && v->size() > 1){
+		if((strcmp(ptr, "pop\0") == 0 || strcmp(ptr, "pop") == 0) && v->size() > 1){
 			stack.Pop();
 			return 0;
 			}
 		//If first token says 'push', then push second token into stack
-		if((strcasecmp(ptr, "push\0") == 0 || strcasecmp(ptr, "push") == 0)){
+		if((strcmp(ptr, "push\0") == 0 || strcmp(ptr, "push") == 0)){
 			stack.Push(v->back());
 			return 0;
 			}
-
 
 		}
 
