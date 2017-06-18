@@ -24,7 +24,7 @@ int main(){
 
 		count++;
 		v = tok.GetTokens(); //Set pointer equal to a vector
-		char *ptr = &v->back()[0];
+		char *ptr = &v->front()[0];
 
 
 
@@ -35,7 +35,7 @@ int main(){
 			}
 		//If first token says 'push', then push second token into stack
 		if((strcmp(ptr, "push\0") == 0 || strcmp(ptr, "push") == 0)){
-			stack.Push(v->at(1));
+			stack.Push(v->back());
 			//return 0;
 			}
 		//Checks to see if the token says 'quit'
