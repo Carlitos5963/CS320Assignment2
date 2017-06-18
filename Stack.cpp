@@ -1,7 +1,7 @@
 #include "Stack.hpp"
 
 using namespace std;
-
+/*
 // Method used to push data onto the stack
 template <class T> 
 void Stack <T>::Push(T d){
@@ -32,4 +32,4 @@ void Stack <T>::Print(){
 
 template class Stack<int>;
 
-
+*/

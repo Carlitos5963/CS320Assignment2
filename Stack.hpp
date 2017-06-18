@@ -4,7 +4,8 @@ using namespace std;
 
 template <class T>
 class Stack{
-public:
+
+	public:
 
 	void Stack<T>::Push(T d); 
 	T Stack<T>::Pop();
@@ -12,4 +13,4 @@ public:
 	Stack();
 };
 
-
+template class Stack<int>;
