@@ -39,7 +39,7 @@ int main(){
 			return 0;
 			}
 		//Checks to see if the token says 'quit'
-		if((strcasecmp(ptr, "quit\0") == 0 || strcasecmp(ptr, "quit") == 0) || count > 5){
+		if((strcasecmp(ptr, "quit\0") == 0 || strcasecmp(ptr, "quit") == 0) || count > 6)		{
 			stack.Print();
 			return 0;
 			}
