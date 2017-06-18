@@ -27,6 +27,7 @@ int main(){
 
 		//Checks to see if the token says 'quit'
 		if(strcasecmp(ptr, "quit\0") == 0 || strcasecmp(ptr, "quit") == 0){
+			stack::print();
 			return 0;
 			}
 		//If there are 2 tokens at this point then they must be a string and an int
