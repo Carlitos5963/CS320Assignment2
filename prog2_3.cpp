@@ -29,7 +29,7 @@ int main(){
 
 
 		//If first token says 'pop', then pop top stack token off of stack
-		if((strcmp(ptr, "pop\0") == 0 || strcmp(ptr, "pop") == 0) && v->size() > 1){
+		if((strcmp(ptr, "pop\0") == 0 || strcmp(ptr, "pop") == 0) && v->size() == 1){
 			stack.Pop();
 			//return 0;
 			}
