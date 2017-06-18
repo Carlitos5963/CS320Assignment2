@@ -26,17 +26,29 @@ int main(){
 		char *ptr = &v->back()[0];
 
 		//Checks to see if the token says 'quit'
-		if(strcasecmp(ptr, "quit\0") == 0 || strcasecmp(ptr, "quit") == 0){
+		if((strcasecmp(ptr, "quit\0") == 0 || strcasecmp(ptr, "quit") == 0) || ){
 			stack.Print();
 			return 0;
 			}
+
+		//Checks to see if the token says 'pop'
+		if((strcasecmp(ptr, "pop\0") == 0 || strcasecmp(ptr, "pop") == 0) || ){
+			stack.Pop();
+			return 0;
+			}
+		//Checks to see if the token says 'push'
+		if((strcasecmp(ptr, "push\0") == 0 || strcasecmp(ptr, "push") == 0) || ){
+			stack.Push(v->back());
+			return 0;
+			}
+
 		//If there are 2 tokens at this point then they must be a string and an int
 		if(v->size() >= 2){
-			cout << "STR INT" << endl;
+			//cout << "STR INT" << endl;
 			}
 		//If there is 1 string and its not "quit" then it must just be a string
 		if(v->size() == 1){
-			cout << "STR" << endl;
+			//cout << "STR" << endl;
 			}
 		}
 
